@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Pendaftaran Akun - videobelajar</title>
+  <link rel="stylesheet" href="../style/register.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">video<b>belajar</b></div>
+  </header>
+
+  <main class="main-content">
+    <div class="register-box">
+      <h2 class="register-title">Pendaftaran Akun</h2>
+      <p class="register-subtitle">Yuk, daftarkan akunmu sekarang juga!</p>
+
+      <form class="register-form">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="required">*</span></label>
+          <input type="text" placeholder="Nama lengkap" required />
+        </div>
+
+        <div class="form-group">
+          <label>E-Mail <span class="required">*</span></label>
+          <input type="email" placeholder="email@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin <span class="required">*</span></label>
+          <select required>
+            <option value="">Pilih</option>
+            <option value="wanita">Wanita</option>
+            <option value="pria">Pria</option>
+          </select>
+        </div>
+
+        <div class="form-group phone-group">
+          <label>No. Hp <span class="required">*</span></label>
+          <div class="phone-input">
+            <select class="country-code">
+              <option value="+62">🇮🇩 +62</option>
+              <option value="+60">🇲🇾 +60</option>
+            </select>
+            <input type="tel" placeholder="Nomor HP" required />
+          </div>
+        </div>
+
+        <div class="form-group password-group">
+          <label>Kata Sandi <span class="required">*</span></label>
+          <input type="password" id="password" placeholder="********" required />
+          <span class="toggle-password" onclick="togglePassword('password')">👁️‍🗨️</span>
+        </div>
+
+        <div class="form-group password-group">
+          <label>Konfirmasi Kata Sandi <span class="required">*</span></label>
+          <input type="password" id="confirm_password" placeholder="********" required />
+          <span class="toggle-password" onclick="togglePassword('confirm_password')">👁️‍🗨️</span>
+        </div>
+
+        <div class="forgot-password">
+          <a href="#">Lupa Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Daftar</button>
+        <button type="button" class="btn btn-secondary">Masuk</button>
+
+        <div class="divider">atau</div>
+
+        <button type="button" class="btn btn-google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" />
+          Daftar dengan Google
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>

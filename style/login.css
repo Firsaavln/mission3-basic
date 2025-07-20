@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fffbea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #f7941d;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo b {
+  color: #ed1c24;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  flex-grow: 1;
+}
+
+.login-box {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: red;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.forgot-password a {
+  color: #3f8dfd;
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3fd37a;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #dfffe8;
+  color: #2a2a2a;
+}
+
+.divider {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin: 16px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.btn-google {
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.btn-google img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 24px 16px;
+    border-radius: 8px;
+  }
+
+  .logo {
+    text-align: start;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+
+
+  input[type="email"],
+  input[type="password"] {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .toggle-password {
+    top: 36px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .divider::before,
+  .divider::after {
+    width: 35%;
+  }
+}
